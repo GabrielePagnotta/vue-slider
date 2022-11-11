@@ -9,13 +9,13 @@
  <title>Document</title>
 </head>
 <body>
-  <img id="root">
-    <!-- back arrow -->
-    <i class="fa-solid fa-arrow-left arrow" @click=""></i>
+  <div id="root">
+    <!-- backward arrow -->
+    <i class="fa-solid fa-arrow-left arrow" @click="backward"></i>
     <!-- img -->
-    <img class="image" :src="" alt="">
+    <img class="image" :src="images[index].img" alt="">
     <!-- forward arrow -->
-    <i class="fa-solid fa-arrow-right arrow" @click=""></i>
+    <i class="fa-solid fa-arrow-right arrow" @click="forward"></i>
 
   </div>
   <!-- vue 2 -->
