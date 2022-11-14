@@ -8,21 +8,32 @@ var app = new Vue({
         {img:"https://www.artemedialab.it/wp-content/uploads/2019/04/immagini-sfondo-1-700x400.jpg"},
         {img:"https://hd2.tudocdn.net/1039913?w=824&h=494"},
       ],
+      
+      img1:"https://www.venetoformazione.it/wp-content/uploads/2022/02/ottimizzare-immagini-display-retina.jpg",
+      img2:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHpTun6ZJzXtt0rIiRtvI5Hdt0JwtGFxxmcA&usqp=CAU",
         
-      index:0,
+      i:0,
+      
+
       },
+
+      mounted(){
+        this.intervallo()
+      },
+  
       methods:{
         forward: function(){
           
             let lunghezza= this.images.length - 1;
 
+            console.log(this.images.length)
+
             
-            if(this.index >= lunghezza){
-            return this.index = 0;
+            if(this.i == lunghezza){
+            return this.i = 0;
             }else{
-             return this.index++;
-            }
-            
+             return this.i++;
+            }   
       },
 
       backward: function(){
@@ -30,15 +41,25 @@ var app = new Vue({
         let lunghezza= this.images.length - 1;
 
         
-        if(this.index == 0){
-        return this.index = lunghezza;
+        if(this.i == 0){
+        return this.i = lunghezza;
         }else{
-         return this.index--;
+         return this.i--;
         }
         
   },
-  }
+    intervallo(){
+      return setInterval(()=>{this.forward()},3000)
+    },
+
+    dot(index){
+      this.i= index
+    },
+
+  },
 })
+
+
 
  
 

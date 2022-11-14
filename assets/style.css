@@ -4,10 +4,34 @@
     background-color: gray;
     padding:10px;
     border-radius: 10px;
-    
-    
-};
+    cursor: pointer;
+}   
+
+.align-center{
+    align-items: center;
+}
 
 .image{
     display: inline-block;
+    
+}
+
+.dot{
+    width:20px;
+    height:20px;    
+    background-color: blue;
+    border-radius: 10px;
+    aspect-ratio: 1/1;
+    margin:5px;
+    cursor: pointer;
+    
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+.col{
+    flex-direction: column;
 }
